@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=sclock
+Comment=A floating, window clock
+Exec=sclok
+Icon=preferences-system-time
+Terminal=false
+Categories=Utility;

@@ -1,0 +1,22 @@
+[package]
+name = "sclok"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.27.2"
+chrono = "0.4.38"
+
+
+[package.metadata.deb]
+maintainer = "Eduardo Salgado <luis.salgado2002@gmail.com>"
+copyright = "2026, Eduardo Salgado"
+extended-description = "A floating, window clock overlay."
+depends = "$auto"
+section = "utility"
+priority = "optional"
+
+assets = [
+    ["target/release/sclok", "usr/bin/", "755"],
+    ["assets/sclok.desktop", "usr/share/applications/", "644"]
+]
