@@ -1,9 +1,8 @@
-#sclok
+# sclok
 
 ![Screenshot](https://github.com/EddySal-phy/sclok/blob/master/images/sclock.png)
-sclok is a lightweight, minimal, window clock overlay for Linux.
 
-A convenient floating clock that can stay visible over your browser or full-screen applications.
+sclok is a lightweight, minimal, floating clock overlay for Linux  that can stay visible over your browser or full-screen applications.
 
 Written in Rust using the `eframe` ([egui](https://github.com/emilk/egui)) GUI framework.
 
