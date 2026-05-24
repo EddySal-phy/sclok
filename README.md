@@ -1,10 +1,23 @@
 # sclok
 
-![Screenshot](https://github.com/EddySal-phy/sclok/blob/master/images/sclock.png)
+![Screenshot](https://github.com/EddySal-phy/sclok/blob/master/images/sclock_2.png)
 
-sclok is a lightweight, minimal, floating clock overlay for Linux  that can stay visible over your browser or full-screen applications.
+sclok is a lightweight, minimal, floating clock overlay for Linux that can stay visible over your browser or full-screen applications.
 
 Written in Rust using the `eframe` ([egui](https://github.com/emilk/egui)) GUI framework.
+
+## Usage
+
+```console
+
+unix@weeb:~$ usage : sclok
+    -S    Display seconds
+    -c    Set text/number color
+    -b    Set background color
+    -t    Set background transparency [0-255] (default: 160)
+    -lc   List colours
+    -h    Help
+```
 
 ## Install
 
@@ -18,7 +31,7 @@ Available for **Linux** (.deb).
 #clone repository
 unix@desk:~$ git clone https://github.com/EddySal-phy/sclok.git
 unix@desk:~$ cd sclok
-unix@desk:~$ sudo dpkg -i install/debian/sclok_0.1.0-1_amd64.deb
+unix@desk:~$ sudo dpkg -i install/debian/sclok_2.0.0-1_amd64.deb
 
 #run
 unix@desk:~$ sclok
