@@ -1,6 +1,6 @@
 # sclok
 
-![Screenshot](https://github.com/EddySal-phy/sclok/blob/master/images/sclock_2.png)
+![Screenshot](https://github.com/EddySal-phy/sclok/blob/master/images/sclok_2.png)
 
 sclok is a lightweight, minimal, floating clock overlay for Linux that can stay visible over your browser or full-screen applications.
 
