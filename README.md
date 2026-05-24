@@ -10,7 +10,7 @@ Written in Rust using the `eframe` ([egui](https://github.com/emilk/egui)) GUI f
 
 ```console
 
-unix@weeb:~$ usage : sclok
+unix@desk:~$ usage : sclok
     -S    Display seconds
     -c    Set text/number color
     -b    Set background color
@@ -18,6 +18,8 @@ unix@weeb:~$ usage : sclok
     -lc   List colours
     -h    Help
 ```
+Right click the frame panel to change the font.
+
 
 ## Install
 
