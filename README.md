@@ -10,10 +10,10 @@ Written in Rust using the `eframe` ([egui](https://github.com/emilk/egui)) GUI f
 
 ```console
 
-unix@desk:~$ usage : sclok
+unix@desk:~$ sclok -h
     -S    Display seconds
-    -c    Set text/number color
-    -b    Set background color
+    -c    Set text/number colour
+    -b    Set background colour
     -t    Set background transparency [0-255] (default: 160)
     -lc   List colours
     -h    Help
