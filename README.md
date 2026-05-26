@@ -15,6 +15,7 @@ unix@desk:~$ sclok -h
     -c    Set text/number colour
     -b    Set background colour
     -t    Set background transparency [0-255] (default: 160)
+    -sf   Set static font size (fix font size in window)
     -lc   List colours
     -h    Help
 ```
@@ -33,7 +34,7 @@ Available for **Linux** (.deb).
 #clone repository
 unix@desk:~$ git clone https://github.com/EddySal-phy/sclok.git
 unix@desk:~$ cd sclok
-unix@desk:~$ sudo dpkg -i install/debian/sclok_2.0.0-1_amd64.deb
+unix@desk:~$ sudo dpkg -i install/debian/sclok_2.1.0-1_amd64.deb
 
 #run
 unix@desk:~$ sclok

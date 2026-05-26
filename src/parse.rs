@@ -1,13 +1,14 @@
 use std::env;
 use super::colour::*;
 
-pub fn parse_args() -> (bool, SclokColour, SclokColour, u8)
+pub fn parse_args() -> (bool, bool, SclokColour, SclokColour, u8)
 {
     // Default values 
     let mut use_seconds = false;
     let mut text_colour = SclokColour::White;
     let mut bg_colour = SclokColour::Black;
     let mut bg_alpha: u8 = 255;
+    let mut static_font: bool = false;
 
     let mut args = env::args().skip(1);
 
@@ -65,6 +66,7 @@ pub fn parse_args() -> (bool, SclokColour, SclokColour, u8)
                     };
                 }
             }
+            "-sf" => static_font = true,
             "-h"  => help(),
             "-lc" => list_colours(),
             _ => {
@@ -73,7 +75,7 @@ pub fn parse_args() -> (bool, SclokColour, SclokColour, u8)
         }
     }
 
-    (use_seconds, text_colour, bg_colour, bg_alpha)
+    (use_seconds, static_font, text_colour, bg_colour, bg_alpha)
 }
 
 
@@ -83,6 +85,7 @@ fn help() {
     println!("    -c    Set text/number color");
     println!("    -b    Set background color");
     println!("    -t    Set background transparency [0-255] (default: 160)");
+    println!("    -sf   Set static font size (fix font size in window)");
     println!("    -lc   List colours");
     println!("    -h    Help");
     std::process::exit(1);

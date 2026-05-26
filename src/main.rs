@@ -13,6 +13,7 @@ use panel_frame::*;
 
 struct Sclok {
     use_seconds: bool,
+    static_font: bool,
     text_colour: SclokColour,
     bg_colour: SclokColour,
     bg_alpha: u8, 
@@ -23,10 +24,11 @@ struct Sclok {
 
 fn main() -> eframe::Result<()> 
 {
-    let (use_seconds, text_colour, bg_colour, bg_alpha) = parse_args();
+    let (use_seconds, static_font, text_colour, bg_colour, bg_alpha) = parse_args();
     
     let sclok = Sclok{
         use_seconds,
+        static_font,
         text_colour, 
         bg_colour,
         bg_alpha,
@@ -72,6 +74,7 @@ impl eframe::App for Sclok
     {
         let window_is_focused: bool = ctx.input(|i| i.viewport().focused.unwrap_or(false));
         let use_seconds   = self.use_seconds;
+        let static_font   = self.static_font;
         let corner_radius = self.corner_radius;
         let text_colour   = set_colour(&self.text_colour, &255); //always use bright text
         let bg_alpha      = self.bg_alpha;
@@ -96,7 +99,7 @@ impl eframe::App for Sclok
         egui::CentralPanel::default()
             .frame(panel_frame)
             .show(ctx, |ui| {
-                draw_sclok_text(ui, &mut self.text_font, &text_colour, use_seconds);   
+                draw_sclok_text(ui, ctx, &mut self.text_font, &text_colour, use_seconds, static_font);   
             });
     }
 }
